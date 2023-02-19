@@ -1,0 +1,345 @@
+:root {
+    --primary-color: #774E2E;
+    --secondary-text-color: #673B19;
+    --accent-text-color: #F37F34;
+    --secondary-bg-color: #FFF9EA;
+    --accent-white-color: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    color: var(--primary-color)
+}
+
+h1,
+h2,
+h3,
+ul,
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+                                  /** Загальний контейнер   */
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+                                       /**   Хедер   */
+
+header .list-item {
+    list-style: none;
+}
+
+header .list {
+    padding: 0;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav .list-item {
+    margin-right: 50px;
+}
+
+.site-nav .list-item:last-child {
+    margin-right: 0px;
+}
+
+.site-nav .link-item {
+    position: relative;
+    display: inline-block;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    color: #774E2E;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+
+    transition: color 250ms linear;
+
+}
+
+.site-nav .link-item::before {
+    position: absolute;
+    
+    left: -30px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    
+    background-image: url(./images/donut.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    opacity: 0;
+
+    transition: opacity 250ms linear;
+}
+
+
+.site-nav .link-item:hover {
+    color: var(--accent-text-color); 
+}
+
+.site-nav .link-item:hover::before {
+    opacity: 1;
+}
+
+
+                                        /**  Секція "Герой"  */
+
+.hero-page {
+    padding-top: 100px;
+    padding-bottom: 167px;
+}
+
+.hero-block {
+    background-image: url(./images/dog-hero.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 575px 596px;
+}
+
+.hero-content {
+    display: inline-block;
+    max-width: 575px;
+}
+
+.hero-page .title {
+    margin-bottom: 56px;
+
+    font-weight: 800;
+    font-size: 110px;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    color: var(--primary-color);
+}
+
+.hero-page .accent-title {
+    color: var(--accent-text-color);
+}
+
+.hero-text {
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+                                               /**   Кнопка  */
+
+.button {
+    margin-bottom: 56px;
+
+    width: 343px;
+    height: 69px;
+    padding: 22px 30px;
+
+    background-color: var(--primary-color);
+    color: var(--accent-white-color);
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+
+    border: none;
+    cursor: pointer;
+
+    transition: color 250ms ease-out,
+        background-color 250ms ease-out;
+}
+
+.button:hover,
+.button:focus {
+    color: var(--accent-white-color);
+    background-color: var(--accent-text-color)
+}
+
+
+                                            /**  Секція "Мої улюбленні солодощі"  */
+
+
+.products  {
+    padding-top: 124px;
+    padding-bottom: 169px;
+
+    background-color: var(--secondary-bg-color);
+
+}
+
+.products .title {
+    margin-bottom: 70px;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.1;
+    
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.products .accent-title {
+
+    color: var(--accent-text-color);
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.products-list .list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    width: calc((100% - 60px)/3);
+    margin-right: 30px;
+   
+
+    background-color: var(--accent-white-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.products-list .list-item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.card-image {
+    margin-bottom: 36px;
+}
+
+.card-bottom-title {
+    margin-bottom: 15px;
+}
+
+.card-bottom-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 36px;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+                                        /**  Секція "Порада від Yummy"  */
+.advice {
+    padding-top: 124px;
+    padding-bottom: 150px;
+}
+
+
+.advice-block {
+    background-image: url(./images/dog2.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 575px 722px;
+    }
+
+.advice-content {
+    width: 575px;
+    padding: 60px 0;
+
+}
+
+.advice .title {
+    margin-bottom: 30px;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.advice .accent-title {
+
+    color: var(--accent-text-color);
+}
+
+.advice .text {
+    margin-bottom: 60px;
+}
+
+.advice .list-title {
+    margin-bottom: 20px;
+}
+
+                                                   /**  ФУТЕР  */
+
+.footer {
+
+    background-color: var(--primary-color);
+    color: var(--accent-white-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.footer-logo {
+    padding: 40px 0;
+}
+
+.footer-content p {
+
+    color: var(--accent-white-color);
+    
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
